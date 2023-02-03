@@ -1,0 +1,9 @@
+terraform.tfstate
+test.tfvars
+.terraform/*
+terraform.tfstate.backup
+terraform.tfstate.*
+terraform.auto.tfvars
+.terraform*
+*secrets*.yaml
+*secrets*.yml

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: docker-app-deplymt
+  labels:
+    app: docker-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-app
+  template:   #specify selector again
+    metadata:
+      labels:
+        app: docker-app
+    spec:    # container spec
+      containers:
+      - name: go-site
+        image: karateexplosion/golang-docker-example:latest
+      
